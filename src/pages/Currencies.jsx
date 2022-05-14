@@ -12,7 +12,7 @@ export default function Currencies() {
   return (
     <div className="currencies">
       {currencies.map(({ name, symbol }) => (
-        <Link to={`/price/${symbol}`}>
+        <Link key={symbol} to={`/price/${symbol}`}>
           <h2>{name}</h2>
         </Link>
       ))}
